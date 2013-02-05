@@ -13,4 +13,4 @@ def opm_fetch(request, url):
     response.body = result.content
     return response
 
-app = webapp2.WSGIApplication([("/([^/]+)", opm_fetch)])
+app = webapp2.WSGIApplication([("/(.*)", opm_fetch)])
